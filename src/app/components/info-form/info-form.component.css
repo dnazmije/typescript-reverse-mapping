@@ -1,0 +1,41 @@
+.form-wrapper {
+  min-width: 300px;
+}
+
+.form-body {
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0;
+}
+
+.button-simple {
+  color: black;
+  background-color: lightblue;
+  border: none;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.button-simple:disabled {
+  background-color: lightgray;
+}
+
+select, input {
+  padding: 5px;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+textarea {
+  margin: 16px 4px;
+  width: 100%;
+}
+

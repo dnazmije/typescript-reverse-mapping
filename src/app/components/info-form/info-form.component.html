@@ -1,0 +1,25 @@
+<div class="form-wrapper" > 
+<form [formGroup]="infoForm" class="form-body">
+
+  <div class="form-item">
+    <label>Name</label>
+    <input type="text" formControlName="name">
+  </div>
+
+  <div class="form-item">
+    <label>Job position</label>
+    <select formControlName="jobPosition">
+      <option *ngFor="let item of jobPositionValues" [ngValue]="item.value">{{item.text}}</option>
+    </select>
+  </div>
+ 
+  <button (click)="onSumbit()" class="button-simple"
+    [disabled]="!infoForm.valid">Submit</button>
+</form>
+
+<div *ngIf="isSubmitClicked">
+  <h5>Submited data is:</h5>
+  <small> {{infoForm.value | json }}</small>
+</div>
+
+</div>
